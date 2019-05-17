@@ -51,7 +51,8 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 	 @Bean
 	    public RemoteTokenServices LocalTokenService() {
 	        final RemoteTokenServices tokenService = new RemoteTokenServices();
-	        tokenService.setCheckTokenEndpointUrl("http://localhost:8090/oauth/check_token");
+	        //tokenService.setCheckTokenEndpointUrl("http://localhost:8090/oauth/check_token");
+	        tokenService.setCheckTokenEndpointUrl("http://autorizador-proyectooauth2prueba.1d35.starter-us-east-1.openshiftapps.com/oauth/check_token");
 	        tokenService.setClientId("cliente");
 	        tokenService.setClientSecret("password");
 	        return tokenService;
